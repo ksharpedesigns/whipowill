@@ -1,0 +1,35 @@
+ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    background: rgba(15, 175, 21, 0.5);
+    position: sticky;
+    top: 0;
+    text-decoration: none;
+
+}
+
+li {
+    text-align: center;
+    display: inline;
+    font-family: palatino;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+li a:hover:not(.active) {
+    background: rgba(12, 135, 16, 0.5);
+    color:#ffffff;
+    text-decoration: none;
+    align-items: flex-end;
+}

@@ -1,0 +1,131 @@
+body {
+background-image: url("lake.jpg");
+background-size: cover;
+color: white;
+font-size: 12pt;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+.transdiv {
+  background: rgba(0, 0, 0, 0.5);
+  width: 50%;
+}
+
+.title-text {
+  font-family: palatino;
+  color: white;
+  font-size: 60px;
+}
+
+p {
+color: white;
+font-size: 16px;
+font-family: palatino;
+}
+
+.cool-border {
+  border-top-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  border-width: medium;
+  transition: 0.5s;
+}
+
+.cool-border:hover{
+  border-top-right-radius: 24px;
+  border-bottom-left-radius: 24px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.round-border {
+  border-radius: 50%;
+  color: none;
+}
+
+.round-border-visible {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-width: 6px;
+  border-color: white;
+  border-style: solid;
+}
+
+.rounded-border {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  color: white;
+  border-width: medium;
+}
+
+.align-center {
+  text-align: center;
+  align-content: center;
+}
+
+.pad-content-bottom {
+  margin-bottom: 40px;
+}
+
+.pad-content-top {
+  margin-top: 40px;
+}
+
+.button {
+background-color: #ffaec9;
+border: none;
+color: white;
+padding: 15px 32px;
+transition: 0.5s;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button:hover {
+  background-color: #800959;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.top-bar {
+  background: rgba(255, 255, 255, 0.5);
+  display: flex;
+  padding: 0;
+  width: 100%;
+  justify-content: center;
+}
