@@ -1,6 +1,9 @@
+@font-face{
+	font-family:"funfont";
+        src: url(../whipowill/website/funfont.ttf)  format("truetype"), /* Safari, Android, iOS */
+}
+
 body {
-background-image: url("lake.jpg");
-background-size: cover;
 color: white;
 font-size: 12pt;
 }
@@ -13,19 +16,24 @@ html {
   opacity: 0;
 }
 
-.transdiv {
-  background: rgba(0, 0, 0, 0.5);
+.transdivdark {
+  background: rgba(0, 0, 0, 0.75);
+  width: 50%;
+}
+
+.transdivlight {
+  background: rgba(255, 255, 255, 0.75);
   width: 50%;
 }
 
 .title-text {
-  font-family: palatino;
-  color: white;
-  font-size: 60px;
+  font-family: funfont;
+  color: #372442;
+  font-size: 24px;
 }
 
 p {
-color: white;
+color: #372442;
 font-size: 16px;
 font-family: palatino;
 }
@@ -123,9 +131,34 @@ transition: 0.5s;
 }
 
 .top-bar {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.75);
   display: flex;
   padding: 0;
   width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
   justify-content: center;
+}
+
+#container {
+	position: relative;
+  font-size: 0;
+}
+
+.slide {
+	border: none;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 750px;
+	-webkit-transition: opacity 2s linear;
+	-moz-transition: opacity 2s linear;
+	-o-transition: opacity 2s linear;
+	transition: opacity 2s linear;
+}
+.showMe {
+  opacity: 1;
 }

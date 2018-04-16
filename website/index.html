@@ -3,13 +3,58 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="navbar.css">
 
-<html>
+<html id="container">
 
-  <head id="home"class="center-block">
+<img id="slideimg0" class="slide showMe" style="z-index: -2;" src="pool.jpg">
+<img id="slideimg1" class="slide" style="z-index: -2;" src="lake.jpg">
+<img id="slideimg2" class="slide" style="z-index: -2;" src="playground.jpg">
+<img id="slideimg3" class="slide" style="z-index: -2;" src="dock.jpg">
+
+<script>
+
+var timer = setInterval(nextImage, 5000);
+var curImage = 0;
+var numImages = 4;
+
+function nextImage() {
+    var e;
+    // remove showMe class from current image
+    e = document.getElementById("slideimg" + curImage);
+    removeClass(e, "showMe");
+
+    // compute next image
+    curImage++;
+    if (curImage > numImages - 1) {
+        curImage = 0;
+    }
+
+    // add showMe class to next image
+    e = document.getElementById("slideimg" + curImage);
+    addClass(e, "showMe");
+}
+
+function addClass(elem, name) {
+    var c = elem.className;
+    if (c) c += " ";  // if not blank, add a space separator
+    c += name;
+    elem.className = c;
+}
+
+function removeClass(elem, name) {
+    var c = elem.className;
+    elem.className = c.replace(name, "").replace(/   /g, " ").replace(/^ | $/g, "");  // remove name and extra blanks
+}
+
+</script>
+
+  <body>
+		<div id="container" class="align-center" style="position: fixed; width: 100%; top: 0; left: 0;">
     <div class="align-center" style="margin: 0 auto;">
       <div class="top-bar">
         <img src="logo.png" alt="logo">
       </div>
+    </div>
+    <div class="align-center" style="margin: 0 auto;">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="prices.html">Prices</a></li>
@@ -17,7 +62,41 @@
         <li><a href="gallery.html">Gallery</a></li>
       </ul>
     </div>
+	</div>
 
-    </head>
+<div style="background-color: green; position: static; margin-top: 750px; width: 100%; left: 0;">
+	<div class="align-center transdivlight" style="margin: 0 auto;">
+		<h1 class="title-text" style="font-family: funfont">Located 30 miles south of Albany in the beautiful Catskill Mountains!</h1>
+		<div class="transparent">.</div>
+		<p style="font-weight: bold;">Open from April 13 to October 8, 2018</p>
+		<p>Whip-O-Will Campsites offers lakeside camping and a world of wilderness on 100 acres of New York’s beautiful and historic Northern Catskill Mountains. Whether your idea of camping is pulling into a full-hookup site, or sleeping under the stars in our lakeside tent area, Whip-O-Will Campsites has what you’re looking for. Fish in our 7-acre lake (no permit required) or relax by the pool.</p>
+		<p>Amenities</p>
+		<div class="container-fluid">
+			<div class="col-sm-6">
+				<p>Full hookup / 50-amp sites</p>
+				<p>Pull-thru sites</p>
+				<p>Premium waterfront sites</p>
+				<p>Tent sites</p>
+				<p>Seasonal sites</p>
+				<p>Swimming Pool</p>
+				<p>Kiddie pool</p>
+				<p>Playground</p>
+				<p>Pavilion</p>
+			</div>
+			<div class="col-sm-6">
+				<p>Catch & release fishing</p>
+				<p>Paddleboat & rowboat rentals</p>
+				<p>Basketball, horseshoes, minigolf, bocce</p>
+				<p>Snack bar & game room</p>
+				<p>Camp store & laundry</p>
+				<p>Firewood & ice</p>
+				<p>Propane canister exchange</p>
+				<p>Pets welcome</p>
+				<p>Dump station</p>
+			</div>
+		</div>
+	</div>
+</div>
 
+    </body>
   </html>

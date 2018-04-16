@@ -1,21 +1,14 @@
 ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    margin: 0 auto;
-    padding: 0;
-    overflow: hidden;
-    background: rgba(15, 175, 21, 0.5);
-    position: sticky;
-    top: 0;
-    text-decoration: none;
-
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: rgba(15, 175, 21, 0.5);
 }
 
 li {
     text-align: center;
     display: inline;
-    font-family: palatino;
 }
 
 li a {
@@ -28,8 +21,7 @@ li a {
 }
 
 li a:hover:not(.active) {
-    background: rgba(12, 135, 16, 0.5);
-    color:#ffffff;
+    background: rgba(255, 250, 0, 0.5);
+    color: white;
     text-decoration: none;
-    align-items: flex-end;
 }
